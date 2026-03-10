@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  background:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url("../../assets/pictures//pic.png");
+  background-size: cover;
+  background-position: center;
+  font-family: Inter, sans-serif;
+}
+
+/* LEFT SIDE */
+.auth-left {
+  flex: 1;
+   margin-top: 140px;
+  padding: 80px;
+  color: white;
+}
+
+.auth-left h1 {
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.travel {
+  font-size: 22px;
+  letter-spacing: 2px;
+}
+
+.tagline {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+/* RIGHT CARD */
+.auth-card {
+  width: 420px;
+  margin: auto 80px auto 0;
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(12px);
+  padding: 40px;
+  border-radius: 18px;
+  color: white;
+}
+
+.auth-card label {
+  font-size: 14px;
+  margin-top: 14px;
+  display: block;
+}
+
+.auth-card input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  border-radius: 8px;
+  border: none;
+}
+
+.forgot {
+  text-align: right;
+  font-size: 13px;
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+.auth-card button {
+  width: 100%;
+  margin-top: 18px;
+  padding: 14px;
+  border-radius: 8px;
+  border: none;
+  background: #2b83f6;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.divider {
+  text-align: center;
+  margin: 20px 0;
+  opacity: 0.8;
+}
+
+.google-btn {
+  background: white;
+  color: #333;
+}
+
+.switch {
+  margin-top: 16px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.switch a {
+  color: #fff;
+  font-weight: 600;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .auth-left {
+    display: none;
+  }
+
+  .auth-card {
+    margin: auto;
+  }
+}

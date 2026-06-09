@@ -21,6 +21,11 @@ const Dashboard = ({ children, active }) => {
              </div>
         </Link>
 
+          <Link to="/locations">
+            <div className={`menu-item ${active === "locations" ? "active" : ""}`}>
+              📍 Locations
+            </div>
+          </Link>
 
           <Link to="/hotels">
             <div className={`menu-item ${active === "hotels" ? "active" : ""}`}>
@@ -35,7 +40,18 @@ const Dashboard = ({ children, active }) => {
           </Link>
 
 
-          <div className="menu-item">📦 Tour Package</div>
+          <Link to="/tour-packages">
+            <div className={`menu-item ${active === "tour-packages" ? "active" : ""}`}>
+              🛣️ Tour Packages
+            </div>
+          </Link>
+
+         <Link to="/car">
+            <div className={`menu-item ${active === "car" ? "active" : ""}`}>
+              🚗 Car Rentals
+            </div>
+          </Link>
+
           <div className="menu-item">🛒 Booking</div>
           <div className="menu-item">💰 Payments</div>
 

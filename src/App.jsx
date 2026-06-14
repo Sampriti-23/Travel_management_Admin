@@ -11,6 +11,7 @@ import Register from "./pages/Registration/Registration";
 import DestinationLocation from "./pages/location/location";
 import TourPackages from "./pages/tour/tour";
 import Cars from "./pages/car/cars";
+import BookingAdmin from "./pages/booking/booking";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/locations" element={<DestinationLocation />} />
         <Route path="/tour-packages" element={<TourPackages />} />
         <Route path="/car" element={<Cars />} />
+        <Route path="/booking" element={<BookingAdmin />} />
         
       </Routes>
     </BrowserRouter>

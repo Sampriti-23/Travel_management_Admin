@@ -52,7 +52,12 @@ const Dashboard = ({ children, active }) => {
             </div>
           </Link>
 
-          <div className="menu-item">🛒 Booking</div>
+          <Link to ="/booking">
+            <div className={`menu-item ${active === "booking" ? "active" : ""}`}>
+              🛒 Bookings
+            </div>
+          </Link>
+          
           <div className="menu-item">💰 Payments</div>
 
           <Link to="/team">

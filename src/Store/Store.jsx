@@ -7,6 +7,7 @@ import locationReducer from "../Reducer/LocationSlice";
 import tourReducer from "../Reducer/TourSlice";
 import carReducer from "../Reducer/CarSlice";
 import user from "../Reducer/UserSlice";
+import booking from "../Reducer/BookingSlice";
 const Store = configureStore(
     {
         reducer:{
@@ -17,7 +18,8 @@ const Store = configureStore(
             location: locationReducer,
             tourPackage: tourReducer,
             car: carReducer,
-            userData:user
+            userData:user,
+            booking: booking
 
         }
     }

@@ -33,6 +33,8 @@ const Cars = () => {
     const formData = new FormData();
     formData.append("name", data.name);
     formData.append("type", data.type);
+    formData.append("source",data.source);
+    formData.append("destination", data.destination);
     formData.append("carnumber", data.carnumber);
     formData.append("price", data.price);
 
@@ -58,6 +60,8 @@ const Cars = () => {
     reset({
       name: car.name,
       type: car.type,
+      source: car.source,
+      destination: car.destination,
       carnumber: car.carnumber,
       price: car.price,
     });
@@ -89,9 +93,20 @@ const Cars = () => {
       {showForm && (
         <form className="car-form" onSubmit={handleSubmit(onSubmit)} encType="multipart/form-data">
           <div className="form-grid">
+
+          <div>
+              <label>Source</label>
+              <input {...register("source")} placeholder="location" required />
+            </div>
+
+            <div>
+              <label>Destination</label>
+              <input {...register("destination")} placeholder="location" required />
+            </div>
+
             <div>
               <label>Vehicle Name / Model</label>
-              <input {...register("name")} placeholder="Hyundai i20" required />
+              <input {...register("name")} placeholder="model name" required />
             </div>
 
             <div>
@@ -107,12 +122,12 @@ const Cars = () => {
 
             <div>
               <label>License Plate Number</label>
-              <input {...register("carnumber")} placeholder="MH-12-AB-1234" required />
+              <input {...register("carnumber")} placeholder="car number" required />
             </div>
 
             <div>
               <label>Price Per Day (₹)</label>
-              <input type="number" {...register("price")} placeholder="1500" required />
+              <input type="number" {...register("price")} placeholder="price" required />
             </div>
 
             <div>
@@ -152,10 +167,12 @@ const Cars = () => {
               <h3>{car.name}</h3>
               
               <p className="car-plate">🔢 <strong>Plate:</strong> {car.carnumber}</p>
-              
+              <p className="car-plate"><strong>Source: </strong>{car.source}</p>
+              <p className="car-plate"><strong>Destination: </strong>{car.destination}</p>
               <div className="car-footer">
                 <p className="price">₹ {car.price} <span>/ day</span></p>
               </div>
+              
 
               <div className="car-actions">
                 <button className="edit-btn" type="button" onClick={() => handleEdit(car)}>Edit</button>

@@ -1,12 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../pages/home/Homee.css";
+import logo from "../assets/logo.jpeg";
 
 const Dashboard = ({ children, active }) => {
   return (
     <div className="home-wrapper">
       <aside className="sidebar">
-        <h1 className="sidebar-title">Hodophile</h1>
+        <div className="logo">
+        <img src={logo} alt="logo" />
+        <span>RoamSpark</span>
+      </div>
 
         <nav className="menu">
           <Link to="/">

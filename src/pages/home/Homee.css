@@ -103,3 +103,28 @@
   justify-content: center;
   font-weight: bold;
 }
+
+.logo{
+  display: flex;
+  align-items: center;   /* vertical alignment */
+  gap: 10px;             /* space between logo & text */
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+/* Logo image */
+.logo img{
+  height: 40px;          /* adjust as needed */
+  width: auto;
+  object-fit: contain;
+}
+/* Text */
+.logo span{
+  font-size: 20px;
+  color: #017d35;
+  letter-spacing: 1px;
+  font-family: 'Playfair Display', serif;
+  font-style: bold;
+  font-size: 26px;
+  font-weight: 900;
+}

@@ -35,6 +35,7 @@ const Cars = () => {
     formData.append("type", data.type);
     formData.append("source",data.source);
     formData.append("destination", data.destination);
+    formData.append("seat", data.seat);
     formData.append("carnumber", data.carnumber);
     formData.append("price", data.price);
 
@@ -62,6 +63,7 @@ const Cars = () => {
       type: car.type,
       source: car.source,
       destination: car.destination,
+      seat: car.seat,
       carnumber: car.carnumber,
       price: car.price,
     });
@@ -102,6 +104,11 @@ const Cars = () => {
             <div>
               <label>Destination</label>
               <input {...register("destination")} placeholder="location" required />
+            </div>
+
+            <div>
+              <label>Seat</label>
+              <input {...register("seat")} placeholder="seat" required />
             </div>
 
             <div>
@@ -169,6 +176,7 @@ const Cars = () => {
               <p className="car-plate">🔢 <strong>Plate:</strong> {car.carnumber}</p>
               <p className="car-plate"><strong>Source: </strong>{car.source}</p>
               <p className="car-plate"><strong>Destination: </strong>{car.destination}</p>
+              <p className="car-plate"><strong>Seat:</strong>{car.seat}</p>
               <div className="car-footer">
                 <p className="price">₹ {car.price} <span>/ day</span></p>
               </div>

@@ -13,7 +13,7 @@ const Dashboard = ({ children, active }) => {
       </div>
 
         <nav className="menu">
-          <Link to="/">
+          <Link to="/home">
             <div className={`menu-item ${active === "dashboard" ? "active" : ""}`}>
               📊 Dashboard
             </div>
